@@ -22,53 +22,53 @@
     }
         
     function playRound(userChoice,computerChoice) {
-        if (userChoice == "Rock" && computerChoice == "Rock"){
+        if (userChoice == "rock" && computerChoice == "Rock"){
             console.log("Computer chose: " + computerChoice)
             console.log("It's a Tie!")
             return
         }
-        else if (userChoice == "Rock" && computerChoice == "Paper"){
+        else if (userChoice == "rock" && computerChoice == "Paper"){
             console.log("Computer chose: " + computerChoice)
             console.log("You lose!")
             computerScore += 1
             return
         }
-        else if (userChoice == "Rock" && computerChoice == "Scissors"){
+        else if (userChoice == "rock" && computerChoice == "Scissors"){
             console.log("Computer chose: " + computerChoice)
             console.log("You Win!")
             humanScore += 1
             return
         }
-        else if (userChoice == "Paper" && computerChoice == "Rock"){
+        else if (userChoice == "paper" && computerChoice == "Rock"){
             console.log("Computer chose: " + computerChoice)
             console.log("You Win!")
             humanScore += 1
             return
         }
-        else if (userChoice == "Paper" && computerChoice == "Paper"){
+        else if (userChoice == "paper" && computerChoice == "Paper"){
             console.log("Computer chose: " + computerChoice)
             console.log("It's a Tie!")
             return
         }
-        else if (userChoice == "Paper" && computerChoice == "Scissors"){
+        else if (userChoice == "paper" && computerChoice == "Scissors"){
             console.log("Computer chose: " + computerChoice)
             console.log("You lose!")
             computerScore += 1
             return
         }
-        else if (userChoice == "Scissors" && computerChoice == "Rock"){
+        else if (userChoice == "scissors" && computerChoice == "Rock"){
             console.log("Computer chose: " + computerChoice)
             console.log("You lose!")
             computerScore += 1
             return
         }
-        else if (userChoice == "Scissors" && computerChoice == "Paper"){
+        else if (userChoice == "scissors" && computerChoice == "Paper"){
             console.log("Computer chose: " + computerChoice)
             console.log("You Win!")
             humanScore += 1
             return
         }
-        else if (userChoice == "Scissors" && computerChoice == "Scissors"){
+        else if (userChoice == "scissors" && computerChoice == "Scissors"){
             console.log("Computer chose: " + computerChoice)
             console.log("It's a tie!")
             return
@@ -80,22 +80,22 @@
     }
 
 
-    while (gameStart == true){
+       
+    function playGame() {
+        let rounds = 5;
 
-         let userInput = prompt("Rock, Paper, Scissors: ")
-        
-         if (userInput == null){
-            break
-         }
-         else {
-            playRound(userInput, getComputerChoice())
+        for (var i = 0;i < rounds; i++) {
+
+        let humanChoice = prompt("Rock, Paper, Scissors: ")
+
+        playRound(humanChoice.toLowerCase(), getComputerChoice())
             console.log("Human score: " + humanScore)
             console.log("Computer score: " + computerScore)
-
-         }
-
+        }
+        
     }
-       
+
+    playGame()
     
 
 </script>
